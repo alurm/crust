@@ -1,48 +1,51 @@
 
 ```c
-struct point { int x; int y };
+int twice(int x) = x + x;
 
-int five_expression_functions() = 5;
+int area(struct { int x = a; int y = b; }) = a * b;
 
-int area_struct_unpacking(struct point { int x; int y; }) = x * y;
+struct { int x; int y; } p = struct { int x = 1; int y = 2; };
 
-(int, int) tuple_example = (){ 1, 2 };
+area(struct { 1, 2 });
 
-(int i, int j) tuple_unpacking_example = (){ 1, 2 };
+int four = { 4 };
 
-struct point tuple_compatible_with_struct = (){ 1, 2 };
+_Forall(t) void traverse_array(
+    t *array,
+    size_t length,
+    void f(t),
+) = for (size_t i = 0; i < length; i++) f(array[i]);
 
-int pass_tuple_example = area_struct_unpacking((){ 1, 2 });
+traverse_array(int)(
+    (int[]){ 1, 2, 3 },
+    3,
+    (int i) = printf("%d\n", i),
+);
 
-int block_value = { 4 };
+_Forall(t) struct array_list {
+    t *array;
+    size_t used;
+    size_t free;
+};
 
-void block_void_value = { 4; };
-
-_Forall(T) int generic_example = sizeof(T);
-
-_Forall(T) struct generic_struct_example {
-    T *data;
-    int length;
-    int capacity;
-}
-
-generic_example(int);
-struct generic_struct_example(int) foo;
-
-int if_value = if (true) 1; else 2;
-void value = if (true);
-int while_value = while (true) { break 4 }
+struct int_array_list = struct array_list(int);
 
 enum union shape {
     double circle;
-    (double, double) rectangle;
+    struct { double w; double h; } rectangle;
 } circle = { .circle = 3 };
 
-double area(enum union shape s) = enum switch (s) {
+double area(enum union shape s) = (s) {
     .circle = s * s * 3.1415,
     .rectangle = {
-        (int h, int w) = s;
+        struct { double w = w; double h = h; } = s;
         h * w
     },
+}
+
+int five = block: while (true) {
+    block 5;
 };
+
+void _ = void;
 ```

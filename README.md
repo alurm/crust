@@ -16,3 +16,5 @@
 - Compilers: Principles, Techniques, and Tools
 - Lex & YACC, O'Relly
 - Expert C Programming: Deep C Secrets
+
+- [Rust with Nix](https://nixos.wiki/wiki/Rust). Also Devenv, Devbox and Docker exist.
