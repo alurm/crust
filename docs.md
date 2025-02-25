@@ -1,4 +1,4 @@
-# Web
+# Web cache
 
 - [C89](docs/web/cdn.intra.42.fr/pdf/pdf/149447/ansi-iso-9899-1990.pdf)
 - [Lexer Hack, Wikipedia](docs/web/en.wikipedia.org/wiki/Lexer_hack.html)
@@ -24,4 +24,4 @@
 # Other
 
 - [On parsing C declarations](docs/cdecl.md)
-- [Ideas for features to add to C](docs/potential-features.md)
+- [Ideas for features to add to C](docs/potential-feature-ideas.md)
