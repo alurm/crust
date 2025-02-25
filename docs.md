@@ -1,8 +1,3 @@
-# Index
-
-- [On parsing C declarations](docs/cdecl.md)
-- [Ideas for features to add to C](docs/features.md)
-
 # Web
 
 - [C89](docs/web/cdn.intra.42.fr/pdf/pdf/149447/ansi-iso-9899-1990.pdf)
@@ -25,3 +20,8 @@
 
 - [ChibiCC](docs/git/chibicc)
 - [PyCParser](docs/git/pycparser)
+
+# Other
+
+- [On parsing C declarations](docs/cdecl.md)
+- [Ideas for features to add to C](docs/potential-features.md)
